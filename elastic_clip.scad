@@ -11,7 +11,9 @@ STRIP_WIDTH = 24;
 
 HOLDER_OFFSET = 10;
 HOLDER_THICKNESS = 4;
-HOLDER_WIDTH = 24;
+HOLDER_WIDTH = 25;
+
+TOLERANCE = 0.2;
 
 base();
 
@@ -28,7 +30,7 @@ module base(){
             cube([STRIP_WIDTH,STRIP_THICKNESS,CLIP_HEIGHT*2], true);
             
             translate([0,-HOLDER_THICKNESS/2 - CLIP_MIDDLE_WALL/2,0])        
-            cube([HOLDER_WIDTH,HOLDER_THICKNESS,CLIP_HEIGHT*2], true);
+            cube([HOLDER_WIDTH + TOLERANCE, HOLDER_THICKNESS,CLIP_HEIGHT*2], true);
             
         };
         translate([0,0, (CLIP_HEIGHT + MIDDLE_FIN_HEIGHT)/2])
