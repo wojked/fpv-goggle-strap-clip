@@ -1,9 +1,9 @@
 CLIP_HEIGHT = 10;
-CLIP_WALL_THICKNESS = 3.0;
+CLIP_WALL_THICKNESS = 2.80;
 CLIP_SIDE_WALL_THICKNESS = 3.0;
 
-CLIP_MIDDLE_WALL = 4;
-MIDDLE_FIN_HEIGHT = 20;
+CLIP_MIDDLE_WALL = 2.5;
+MIDDLE_FIN_HEIGHT = 0;
 
 STRIP_THICKNESS = 3.0; // 2.2 without velcro
 STRIP_WIDTH = 24;
@@ -30,7 +30,7 @@ module base(){
             cube([STRIP_WIDTH,STRIP_THICKNESS,CLIP_HEIGHT*2], true);
             
             translate([0,-HOLDER_THICKNESS/2 - CLIP_MIDDLE_WALL/2,0])        
-            cube([HOLDER_WIDTH + TOLERANCE, HOLDER_THICKNESS,CLIP_HEIGHT*2], true);
+            cube([HOLDER_WIDTH + TOLERANCE, HOLDER_THICKNESS + TOLERANCE,CLIP_HEIGHT*2], true);
             
         };
         translate([0,0, (CLIP_HEIGHT + MIDDLE_FIN_HEIGHT)/2])
